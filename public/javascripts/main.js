@@ -11,6 +11,12 @@ $(document).ready( function() {
 				method: 'POST',
 				url: "/users",
 				data: data
+			}).done(function() {
+				if ( $('p').text() === 'Users: ' ) {
+				$('p').append(data);
+				} else {
+					$('p').append(', '+data);
+				}
 			})
 	})
 })

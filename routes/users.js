@@ -22,8 +22,6 @@ router.post('/', function(req,res,next) {
 		let names = obj.users.split(', ')
 		console.log(names);
 		fs.writeFile('routes/users.json', JSON.stringify(obj));
-		res.render('users', { names: 'this is a test'});
-		console.log(names);
 		res.end();
 	})
 })
